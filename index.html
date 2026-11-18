@@ -191,15 +191,67 @@ header.nav{background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 2px 12p
 .strategic em{font-style:normal;color:#fdffff;font-weight:500}
 
 /* Footer */
+/* Footer */
 .thanks{background:linear-gradient(135deg,var(--teal),var(--teal-dark));color:#fff;text-align:center;padding:60px 0}
 .thanks h2{font-size:34px;letter-spacing:2px}
 .thanks p{font-size:14px;margin:8px 0 22px;opacity:.92}
-footer{background:#0b2a2d;color:#bcd7d6;padding:50px 0 20px;font-size:13px}
-.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1.3fr;gap:30px;margin-bottom:30px}
-footer h4{color:#fff;margin-bottom:12px;font-weight:600}
-footer li{margin-bottom:6px}
+
+footer{
+  background:#0b2a2d;
+  color:#bcd7d6;
+  padding:50px 0 20px;
+  font-size:13px;
+}
+
+.fgrid{
+  display:grid;
+  grid-template-columns:1.3fr 1fr 1.2fr 1.4fr;
+  gap:30px;
+  margin-bottom:30px;
+}
+
+footer h4{
+  color:#fff;
+  margin-bottom:14px;
+  font-weight:600;
+  font-size:15px;
+}
+
+footer p{line-height:1.8}
+footer li{margin-bottom:9px}
+footer a{color:#bcd7d6;transition:.3s}
 footer a:hover{color:#5eead4}
-.copy{border-top:1px solid rgba(255,255,255,.1);padding-top:16px;text-align:center;font-size:12px}
+
+.footer-contact a{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  margin-bottom:14px;
+  overflow-wrap:anywhere;
+}
+
+.contact-icon{
+  color:#5eead4;
+  font-size:17px;
+  width:20px;
+  flex-shrink:0;
+}
+
+.copy{
+  border-top:1px solid rgba(255,255,255,.1);
+  padding-top:16px;
+  text-align:center;
+  font-size:12px;
+}
+
+/* Responsive Footer */
+@media(max-width:900px){
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:560px){
+  .fgrid{grid-template-columns:1fr}
+}
 
 /* Responsive */
 @media(max-width:1000px){
@@ -554,13 +606,16 @@ footer a:hover{color:#5eead4}
 </section>
 
 <!-- Footer -->
-<footer>
+<!-- Footer -->
+<footer id="kontak">
   <div class="container">
     <div class="fgrid">
+
       <div>
         <h4>Center of Excellence</h4>
         <p>Profil Departemen CoE PT Tiga Serangkai Inti Corpora. Pusat studi dan pengembangan keunggulan bisnis sejak 2019.</p>
       </div>
+
       <div>
         <h4>Tautan</h4>
         <ul>
@@ -571,6 +626,7 @@ footer a:hover{color:#5eead4}
           <li><a href="#mitra">Mitra Kerja Sama</a></li>
         </ul>
       </div>
+
       <div>
         <h4>Website CoE</h4>
         <ul>
@@ -580,8 +636,31 @@ footer a:hover{color:#5eead4}
           <li><a href="https://think-smart.ai.studio" target="_blank" rel="noopener">Think Smart English Learning Hub</a></li>
         </ul>
       </div>
+
+      <div class="footer-contact">
+        <h4>Hubungi Kami</h4>
+
+        <a href="mailto:mmptigaserangkai@gmail.com">
+          <span class="contact-icon">✉</span>
+          <span>mmptigaserangkai@gmail.com</span>
+        </a>
+
+        <a href="https://www.tiktok.com/@magangts" target="_blank" rel="noopener">
+          <span class="contact-icon">♪</span>
+          <span>@magangts</span>
+        </a>
+
+        <a href="https://wa.me/6281325665602" target="_blank" rel="noopener">
+          <span class="contact-icon">☏</span>
+          <span>081325665602</span>
+        </a>
+      </div>
+
     </div>
-    <div class="copy">© 2026 Center of Excellence – PT Tiga Serangkai Inti Corpora. Seluruh hak cipta dilindungi.</div>
+
+    <div class="copy">
+      © 2026 Center of Excellence – PT Tiga Serangkai Inti Corpora. Seluruh hak cipta dilindungi.
+    </div>
   </div>
 </footer>
 
