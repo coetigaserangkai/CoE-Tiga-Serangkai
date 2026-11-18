@@ -1,4 +1,3 @@
-<script>
 // Menu mobile
 const menu=document.getElementById('menu');
 document.getElementById('burger').addEventListener('click',()=>menu.classList.toggle('open'));
@@ -71,6 +70,3 @@ const io=new IntersectionObserver(es=>es.forEach(en=>{
   io.unobserve(en.target);
 }),{threshold:.4});
 io.observe(document.querySelector('.stats'));
-</script>
-</body>
-</html>
