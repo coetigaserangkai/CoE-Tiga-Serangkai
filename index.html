@@ -115,17 +115,20 @@ header.nav{background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 2px 12p
 .org li::before{content:"✓";position:absolute;left:0;top:0;width:18px;height:18px;border-radius:50%;background:var(--teal-soft);color:var(--teal);font-size:10px;display:grid;place-items:center;font-weight:700;margin-top:3px}
 .org-link{width:2px;height:22px;background:var(--teal);margin:0 auto 4px}
 .struktur-image {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 10px;
 }
 
 .struktur-image img {
-    width: 80%;
-    max-width: 900px;
+    width: 45%;
+    max-width: 450px;
     height: auto;
+    display: block;
+    object-fit: contain;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Cards / carousel */
