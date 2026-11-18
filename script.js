@@ -61,12 +61,44 @@ window.addEventListener('scroll',()=>{
 });
 
 // Hitung angka statistik
-const io=new IntersectionObserver(es=>es.forEach(en=>{
-  if(!en.isIntersecting)return;
-  en.target.querySelectorAll('[data-count]').forEach(el=>{
-    const to=+el.dataset.count,suf=el.dataset.suffix||'';let n=0;const inc=Math.max(1,Math.ceil(to/60));
-    const t=setInterval(()=>{n=Math.min(n+inc,to);el.textContent=n+suf;if(n>=to)clearInterval(t)},25);
+document.addEventListener('DOMContentLoaded', () => {
+  const stats = document.querySelector('.stats');
+
+  if (!stats) return;
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      const counters = entry.target.querySelectorAll('[data-count]');
+
+      counters.forEach(el => {
+        const target = Number(el.dataset.count);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1500;
+        const startTime = performance.now();
+
+        function updateCounter(currentTime) {
+          const progress = Math.min((currentTime - startTime) / duration, 1);
+          const value = Math.floor(progress * target);
+
+          el.textContent = value + suffix;
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            el.textContent = target + suffix;
+          }
+        }
+
+        requestAnimationFrame(updateCounter);
+      });
+
+      observer.unobserve(entry.target);
+    });
+  }, {
+    threshold: 0.2
   });
-  io.unobserve(en.target);
-}),{threshold:.4});
-io.observe(document.querySelector('.stats'));
+
+  observer.observe(stats);
+});
