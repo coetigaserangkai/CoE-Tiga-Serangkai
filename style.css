@@ -251,16 +251,47 @@ footer a:hover{color:#5eead4}
 
 .footer-contact a{
   display:flex;
-  align-items:flex-start;
+  align-items:center;
   gap:10px;
-  margin-bottom:14px;
+  min-height:24px;
+  margin-bottom:10px;
   overflow-wrap:anywhere;
+}
+
+.footer-social{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:2px;
+}
+
+.footer-social a{
+  width:34px;
+  height:34px;
+  display:grid;
+  place-items:center;
+  margin:0;
+  border:1px solid rgba(188,215,214,.35);
+  border-radius:50%;
+  transition:.25s;
+}
+
+.footer-social a:hover{
+  background:#5eead4;
+  border-color:#5eead4;
+  color:#0b2a2d;
+  transform:translateY(-2px);
 }
 
 .contact-icon{
   color:#5eead4;
   font-size:17px;
   width:20px;
+  height:20px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   flex-shrink:0;
 }
 
