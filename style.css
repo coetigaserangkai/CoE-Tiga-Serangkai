@@ -125,7 +125,7 @@ header.nav{background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 2px 12p
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: -28px auto 12px;
+    margin: -28px auto 10px;
     padding: 0;
     background: transparent;
     box-shadow: none;
@@ -284,7 +284,7 @@ footer a:hover{color:#5eead4}
 @media(max-width:1000px){
   .out{grid-template-columns:repeat(3,1fr)}
   .teams{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .struktur-image{margin:-18px auto 10px}
+  .struktur-image{margin:-18px auto 8px}
   .struktur-image img{width:88%;max-width:760px}
 }
 @media(max-width:900px){
@@ -310,6 +310,6 @@ footer a:hover{color:#5eead4}
   .teams{grid-template-columns:1fr}
   .out{grid-template-columns:repeat(2,1fr)}
   .topbar .container{justify-content:center;text-align:center}
-  .struktur-image{margin:-8px auto 8px}
+  .struktur-image{margin:-8px auto 6px}
   .struktur-image img{width:100%;max-width:none;border-radius:8px}
 }
