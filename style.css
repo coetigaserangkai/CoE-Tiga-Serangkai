@@ -124,15 +124,16 @@ header.nav{background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 2px 12p
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px auto;
-    padding: 10px;
+    width: 100%;
+    margin: -28px auto 12px;
+    padding: 0;
     background: transparent;
     box-shadow: none;
     border: none;
 }
 .struktur-image img {
-    width: 60%;
-    max-width: 600px;
+    width: 78%;
+    max-width: 760px;
     height: auto;
     display: block;
     object-fit: contain;
@@ -283,6 +284,8 @@ footer a:hover{color:#5eead4}
 @media(max-width:1000px){
   .out{grid-template-columns:repeat(3,1fr)}
   .teams{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .struktur-image{margin:-18px auto 10px}
+  .struktur-image img{width:88%;max-width:760px}
 }
 @media(max-width:900px){
   .menu{position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 0;display:none;box-shadow:0 10px 20px rgba(0,0,0,.08)}
@@ -307,4 +310,6 @@ footer a:hover{color:#5eead4}
   .teams{grid-template-columns:1fr}
   .out{grid-template-columns:repeat(2,1fr)}
   .topbar .container{justify-content:center;text-align:center}
+  .struktur-image{margin:-8px auto 8px}
+  .struktur-image img{width:100%;max-width:none;border-radius:8px}
 }
