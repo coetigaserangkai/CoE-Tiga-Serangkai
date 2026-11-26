@@ -93,7 +93,6 @@ header.nav{background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 2px 12p
 
 /* Peran */
 .looking{position:relative;background:linear-gradient(#e3f1f0,#f1f8f8);padding:56px 0 0;overflow:hidden}
-.looking::after{content:"🌿";position:absolute;right:5%;top:8px;font-size:110px;opacity:.45}
 .cats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;width:min(820px,92%);margin:0 auto;position:relative;z-index:2;transform:translateY(46px)}
 .cat{background:#fff;border:2px solid transparent;border-radius:var(--radius);box-shadow:var(--shadow);padding:26px 10px 20px;text-align:center;transition:.25s;cursor:pointer;font-family:inherit}
 .cat:hover{transform:translateY(-5px)}
